@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const addMdx = require('@next/mdx');
+import addMdx from '@next/mdx';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -10,4 +10,6 @@ const nextConfig = {
 	},
 };
 
-module.exports = addMdx(nextConfig);
+addMdx(nextConfig);
+
+export default nextConfig;

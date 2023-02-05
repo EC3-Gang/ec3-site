@@ -9,6 +9,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@mdx-js/loader": "^2.2.1",
     "@next/font": "13.1.6",
     "@next/mdx": "^13.1.6",
     "@types/aos": "^3.0.4",
