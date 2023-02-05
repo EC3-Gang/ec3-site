@@ -6,7 +6,7 @@ export default function Credits() {
 					Credits
 				</h1>
 				<p className='mt-3 text-lg font-fira'>
-					Made by <a href='https://github.com/DET171' target='_blank' rel='noreferrer'>DET171 (Canaris)</a>
+					Made by <a href='https://canaris.is-a.dev' target='_blank' rel='noreferrer'>DET171 (Canaris)</a>
 				</p>
 				<p className='mt-3 text-lg font-fira'>
 					Domain sponsored by <a href='https://www.instagram.com/monkey_gayming/' target='_blank' rel='noreferrer'>monkey_gayming</a>
