@@ -39,6 +39,9 @@ export default function RootLayout({
 					<Link href='/about' className='mr-12 neon-green'>
 						About Us
 					</Link>
+					<Link href='/blog' className='mr-12 neon-green'>
+						Blog
+					</Link>
 					<Link href='/credits' className='mr-12 neon-green'>
 						Credits
 					</Link>

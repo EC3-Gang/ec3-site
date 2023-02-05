@@ -86,6 +86,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/mdx@npm:^13.1.6":
+  version: 13.1.6
+  resolution: "@next/mdx@npm:13.1.6"
+  dependencies:
+    source-map: ^0.7.0
+  peerDependencies:
+    "@mdx-js/loader": ">=0.15.0"
+    "@mdx-js/react": "*"
+  checksum: c66f13bda04221c8a4329dd064ba944573d98c7ab01d161f8a9c7cc632dd31b2b9df0fd76b8deccf71cddbc9b4e1f241a908898a08739e1b2c7d4a187c8e2574
+  languageName: node
+  linkType: hard
+
 "@next/swc-android-arm-eabi@npm:13.1.6":
   version: 13.1.6
   resolution: "@next/swc-android-arm-eabi@npm:13.1.6"
@@ -1120,6 +1132,7 @@ __metadata:
   resolution: "ec3-site@workspace:."
   dependencies:
     "@next/font": 13.1.6
+    "@next/mdx": ^13.1.6
     "@types/aos": ^3.0.4
     "@types/node": 18.11.19
     "@types/react": 18.0.27
@@ -3570,6 +3583,13 @@ __metadata:
   version: 1.0.2
   resolution: "source-map-js@npm:1.0.2"
   checksum: c049a7fc4deb9a7e9b481ae3d424cc793cb4845daa690bc5a05d428bf41bf231ced49b4cf0c9e77f9d42fdb3d20d6187619fc586605f5eabe995a316da8d377c
+  languageName: node
+  linkType: hard
+
+"source-map@npm:^0.7.0":
+  version: 0.7.4
+  resolution: "source-map@npm:0.7.4"
+  checksum: 01cc5a74b1f0e1d626a58d36ad6898ea820567e87f18dfc9d24a9843a351aaa2ec09b87422589906d6ff1deed29693e176194dc88bcae7c9a852dc74b311dbf5
   languageName: node
   linkType: hard
 
