@@ -33,3 +33,21 @@ a:active {
 	color: #00ff00;
 	text-shadow: 0 0 100px #00ff00, 0 0 100px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
 }
+
+::-webkit-scrollbar {
+	width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+	background: #1a202c;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #00ff00;
+	border-radius: 0.25rem;
+}
+
+/* add neon green scrollbar */
+::-webkit-scrollbar-thumb:hover {
+	background: #00c400;
+}

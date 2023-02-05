@@ -1,4 +1,4 @@
-export default function About() {
+export default function Credits() {
 	return (
 		<div className='flex flex-col items-center min-h-screen pt-36 pb-10'>
 			<main className='flex flex-col items-center w-full flex-1 text-center'>

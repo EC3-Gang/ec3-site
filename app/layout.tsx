@@ -31,7 +31,7 @@ export default function RootLayout({
 			</head>
 			<body>
 				{/* top navbar */}
-				<div className='p-5 text-right font-fira bg-transparent absolute top-0 w-full'>
+				<div className='p-5 text-right font-fira bg-[rgba(0,0,0,0.8)] fixed top-0 w-full z-50'>
 					<Link href='/' className='mr-12 neon-green'>
 						Home
 					</Link>
