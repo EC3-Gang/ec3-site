@@ -32,13 +32,13 @@ export default function RootLayout({
 			<body>
 				{/* top navbar */}
 				<div className='p-5 text-right font-fira bg-transparent absolute top-0 w-full'>
-					<Link href='/' className='mr-12'>
+					<Link href='/' className='mr-12 neon-green'>
 						Home
 					</Link>
-					<Link href='/about' className='mr-12'>
+					<Link href='/about' className='mr-12 neon-green'>
 						About Us
 					</Link>
-					<Link href='/credits' className='mr-12'>
+					<Link href='/credits' className='mr-12 neon-green'>
 						Credits
 					</Link>
 				</div>
