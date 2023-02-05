@@ -28,6 +28,7 @@ export default function RootLayout({
 		<html lang='en' className={`${firaCode.variable} ${lato.variable} ${styles['neon-green']} bg-black`}>
 			<head>
 				<title>HCI EC³</title>
+				<meta name='google-site-verification' content='lmVMRfyduXED9G2uYI0Pb35uvXFj34LzRikL-wTm8WY' />
 			</head>
 			<body>
 				{/* top navbar */}
