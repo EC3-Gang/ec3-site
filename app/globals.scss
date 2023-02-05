@@ -1,0 +1,29 @@
+@import 'typed.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main-intro {
+	/* type once Hwa Chong Electronic Communications and Computer Club */
+	@include typed('Hwa Chong Electronic Communications and Computing Club', (
+    type: .08,
+    pause-typed: 2,
+    delete: .08,
+    pause-deleted: 1
+	), (
+		iterations: 0,
+	));
+}
+
+a {
+	@apply text-blue-500;
+}
+
+a:hover {
+	@apply text-blue-600;
+}
+
+a:active {
+	@apply text-blue-700;
+}
