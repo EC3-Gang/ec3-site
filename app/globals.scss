@@ -17,15 +17,15 @@
 }
 
 a {
-	@apply text-blue-500;
+	@apply text-blue-500 #{!important};
 }
 
 a:hover {
-	@apply text-blue-600;
+	@apply text-blue-600 #{!important};
 }
 
 a:active {
-	@apply text-blue-700;
+	@apply text-blue-700 #{!important};
 }
 
 .neon-green {

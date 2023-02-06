@@ -17,8 +17,19 @@ module.exports = {
 				fira: ['var(--font-fira)', ...defaultTheme.fontFamily.mono],
 				lato: ['var(--font-lato)', ...defaultTheme.fontFamily.sans],
 			},
+			typography: ({ theme }) => ({
+				neonGreen: {
+					css: {
+						'--tw-prose-headings': '#00ff00',
+						// hyperlinks
+						'--tw-prose-a': '#00ff00',
+					},
+				},
+			}),
 
 		},
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/typography'),
+	],
 };
