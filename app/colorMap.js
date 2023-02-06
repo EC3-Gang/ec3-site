@@ -23,4 +23,12 @@ export default {
 		accent: '#0000ff',
 		neonColor: '#00009f',
 	},
+	red: {
+		accent: '#ff0000',
+		neonColor: '#9f0000',
+	},
+	lime: {
+		accent: '#7bff00',
+		neonColor: '#4f9f00',
+	},
 };
