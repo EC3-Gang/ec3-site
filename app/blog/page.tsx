@@ -36,7 +36,7 @@ export default async function BlogLanding() {
 						.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 						.map(post => (
 							<Link key={post.slug} href={`/blog/${post.slug}`} className='p-6 mt-6 text-left w-full border-b-2 border-gray-700'>
-								<div className='text-[#00ff00] hover:text-[#3acc3a]'>
+								<div className='main-accent'>
 									<h3 className='text-2xl font-bold'>{post.title}</h3>
 									<p className='mt-2 text-sm'>{post.description}</p>
 									<p className='text-sm'>{post.readingTime}</p>

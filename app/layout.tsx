@@ -1,7 +1,10 @@
+'use client';
 import './globals.scss';
 import type React from 'react';
 import Link from 'next/link';
+import { useEffect } from 'react';
 import 'aos/dist/aos.css';
+import colorMap from './colorMap';
 import { Fira_Code, Lato } from '@next/font/google';
 
 const firaCode = Fira_Code({
@@ -22,9 +25,33 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+	useEffect(() => {
+		// get color theme if it exists, if not set it to green
+		let theme = localStorage.getItem('theme');
+		if (!theme) {
+			localStorage.setItem('theme', 'green');
+			theme = 'green';
+		}
+
+		// set the color theme
+		const root = document.documentElement;
+		if ((colorMap as any)[theme]) {
+			const colors = (colorMap as any)[theme];
+			root.style.setProperty('--text-color', colors.accent);
+			root.style.setProperty('--tw-prose-headings', colors.accent);
+			root.style.setProperty('--neon-color', colors.neonColor);
+		}
+		else {
+			localStorage.setItem('theme', 'green');
+			const colors = colorMap.green;
+			root.style.setProperty('--text-color', colors.accent);
+			root.style.setProperty('--tw-prose-headings', colors.accent);
+			root.style.setProperty('--neon-color', colors.neonColor);
+		}
+	}, []);
 
 	return (
-		<html lang='en' className={`${firaCode.variable} ${lato.variable} neon-green bg-black text-[#00ff00]`}>
+		<html lang='en' className={`${firaCode.variable} ${lato.variable} neon-green bg-black main-accent`}>
 			<head>
 				<title>HCI EC³</title>
 				<meta name='google-site-verification' content='lmVMRfyduXED9G2uYI0Pb35uvXFj34LzRikL-wTm8WY' />
@@ -32,17 +59,20 @@ export default function RootLayout({
 			<body>
 				{/* top navbar */}
 				<div className='p-5 text-right font-fira bg-[rgba(0,0,0,0.8)] fixed top-0 w-full z-50'>
-					<Link href='/' className='mr-12 green'>
+					<Link href='/' className='mr-12 main-accent'>
 						Home
 					</Link>
-					<Link href='/about' className='mr-12 green'>
+					<Link href='/about' className='mr-12 main-accent'>
 						About Us
 					</Link>
-					<Link href='/blog' className='mr-12 green'>
+					<Link href='/blog' className='mr-12 main-accent'>
 						Blog
 					</Link>
-					<Link href='/credits' className='mr-12 green'>
+					<Link href='/credits' className='mr-12 main-accent'>
 						Credits
+					</Link>
+					<Link href='/settings' className='main-accent'>
+						Settings
 					</Link>
 				</div>
 

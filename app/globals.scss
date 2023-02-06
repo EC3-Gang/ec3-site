@@ -1,8 +1,14 @@
 @import 'typed.scss';
+:root {
+	--neon-color: #009100;
+	--text-color: #00ff00;
+}
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 .main-intro {
 	/* type once Hwa Chong Electronic Communications and Computer Club */
@@ -35,12 +41,16 @@ h4,
 h5,
 h6 {
 	/* add neon green text that shines */
-	color: #2dff2d !important;
-	text-shadow: 0 0 100px #00ff00, 0 0 100px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+	color: var(--text-color) !important;
+	text-shadow: 0 0 100px var(--neon-color), 0 0 100px var(--neon-color), 0 0 20px var(--neon-color), 0 0 40px var(--neon-color), 0 0 50px var(--neon-color), 0 0 60px var(--neon-color), 0 0 70px var(--neon-color);
 }
 
-.green {
-	color: #00ff00 !important;
+.prose th {
+	color: var(--text-color) !important;
+}
+
+.main-accent {
+	color: var(--text-color) !important;
 }
 
 ::-webkit-scrollbar {
@@ -52,11 +62,11 @@ h6 {
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #00ff00;
+	background: var(--text-color);
 	border-radius: 0.25rem;
 }
 
 /* add neon green scrollbar */
 ::-webkit-scrollbar-thumb:hover {
-	background: #00c400;
+	background: var(--neon-color);
 }
