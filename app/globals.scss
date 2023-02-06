@@ -28,10 +28,19 @@ a:active {
 	@apply text-blue-700 #{!important};
 }
 
-.neon-green {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	/* add neon green text that shines */
 	color: #2dff2d !important;
 	text-shadow: 0 0 100px #00ff00, 0 0 100px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+}
+
+.green {
+	color: #00ff00 !important;
 }
 
 ::-webkit-scrollbar {
