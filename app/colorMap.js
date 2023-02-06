@@ -15,4 +15,12 @@ export default {
 		accent: '#ffff00',
 		neonColor: '#9f9f00',
 	},
+	blue: {
+		accent: '#00ffff',
+		neonColor: '#009f9f',
+	},
+	navy: {
+		accent: '#0000ff',
+		neonColor: '#00009f',
+	},
 };
