@@ -26,8 +26,8 @@ export default async function BlogLanding() {
 	}
 
 	return (
-		<div className='flex flex-col items-center min-h-screen not-prose'>
-			<main className='flex flex-col items-center w-full flex-1 text-center'>
+		<div className='not-prose'>
+			<main className='w-full text-center'>
 				<h1 className='text-4xl font-bold font-fira'>
 					Blog
 				</h1>
