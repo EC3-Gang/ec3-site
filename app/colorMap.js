@@ -31,4 +31,12 @@ export default {
 		accent: '#7bff00',
 		neonColor: '#4f9f00',
 	},
+	turquoise: {
+		accent: '#00ffb7',
+		neonColor: '#009f7f',
+	},
+	orange: {
+		accent: '#ff7f00',
+		neonColor: '#9f4f00',
+	},
 };
