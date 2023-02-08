@@ -3,6 +3,8 @@ import addMdx from '@next/mdx';
 import rehypePrism from '@mapbox/rehype-prism';
 import remarkGfm from 'remark-gfm';
 import remarkFrontmatter from 'remark-frontmatter';
+import rehypeKatex from 'rehype-katex';
+import remarkMath from 'remark-math';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -18,10 +20,12 @@ export default addMdx({
 	extension: /\.mdx?$/,
 	options: {
 		remarkPlugins: [
+			remarkMath,
 			remarkFrontmatter,
 			remarkGfm,
 		],
 		rehypePlugins: [
+			rehypeKatex,
 			rehypePrism,
 		],
 	},
