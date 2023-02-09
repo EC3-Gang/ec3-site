@@ -31,9 +31,9 @@ export default function Settings() {
 						style={{
 							backgroundColor: (colorMap as any)[color].accent,
 							boxShadow: `
+								0 0 5px ${(colorMap as any)[color].accent},
 								0 0 10px ${(colorMap as any)[color].accent},
-								0 0 25px ${(colorMap as any)[color].accent},
-								0 0 20px ${(colorMap as any)[color].accent}
+								0 0 15px ${(colorMap as any)[color].accent}
 							`,
 						}}
 						onClick={() => {
