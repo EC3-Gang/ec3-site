@@ -38,6 +38,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@giscus/react@npm:^2.2.6":
+  version: 2.2.6
+  resolution: "@giscus/react@npm:2.2.6"
+  dependencies:
+    giscus: ^1.2.6
+  peerDependencies:
+    react: ^16 || ^17 || ^18
+    react-dom: ^16 || ^17 || ^18
+  checksum: 0301afed9d2f0210a7e66ce47f4e1d11f4136b13861c0f5135934cac391c322ca831fcc7455425d37007a71d4de3dc367d8d7d46675ec4ac35ea35ef20adb923
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.8":
   version: 0.11.8
   resolution: "@humanwhocodes/config-array@npm:0.11.8"
@@ -85,6 +97,22 @@ __metadata:
   peerDependencies:
     shiki: ^0.11.1
   checksum: 8ba06ec92e47a575f50b95b08d06096cc5b13a89872b9f5647417c3437b895bda4467f3f16ab1d80fdd1cd6eafca40da605b1485fb921155c675f9a67e3a7af6
+  languageName: node
+  linkType: hard
+
+"@lit-labs/ssr-dom-shim@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@lit-labs/ssr-dom-shim@npm:1.0.0"
+  checksum: ccba6675ad631c6f7360af4e12e328e88d877a52ec992ae9254a1be9902ef699b7916d851b073803dd91244d0f709de2c0539a7db643889cfe341ff6e1a74eb5
+  languageName: node
+  linkType: hard
+
+"@lit/reactive-element@npm:^1.3.0, @lit/reactive-element@npm:^1.6.0":
+  version: 1.6.1
+  resolution: "@lit/reactive-element@npm:1.6.1"
+  dependencies:
+    "@lit-labs/ssr-dom-shim": ^1.0.0
+  checksum: fab0bcfdade9c26af2ad5115fb564bcf8ba0732a3a8be86c157851c2771e3fdc65ab38f2cd60fa121946058bf6e487461fd217f87b01f96e88ee7a95d5d866ba
   languageName: node
   linkType: hard
 
@@ -534,6 +562,13 @@ __metadata:
   version: 7.3.13
   resolution: "@types/semver@npm:7.3.13"
   checksum: 00c0724d54757c2f4bc60b5032fe91cda6410e48689633d5f35ece8a0a66445e3e57fa1d6e07eb780f792e82ac542948ec4d0b76eb3484297b79bd18b8cf1cb0
+  languageName: node
+  linkType: hard
+
+"@types/trusted-types@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "@types/trusted-types@npm:2.0.2"
+  checksum: 3371eef5f1c50e1c3c07a127c1207b262ba65b83dd167a1c460fc1b135a3fb0c97b9f508efebd383f239cc5dd5b7169093686a692a501fde9c3f7208657d9b0d
   languageName: node
   linkType: hard
 
@@ -1899,6 +1934,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ec3-site@workspace:."
   dependencies:
+    "@giscus/react": ^2.2.6
     "@leafac/rehype-shiki": ^2.2.1
     "@mapbox/rehype-prism": ^0.8.0
     "@mdx-js/loader": ^2.2.1
@@ -2856,6 +2892,15 @@ __metadata:
   version: 4.3.0
   resolution: "get-tsconfig@npm:4.3.0"
   checksum: 2597aab99aa3a24db209e192a3e5874ac47fc5abc71703ee26346e0c5816cb346ca09fc813c739db5862d3a2905d89aeca1b0cbc46c2b272398d672309aaf414
+  languageName: node
+  linkType: hard
+
+"giscus@npm:^1.2.6":
+  version: 1.2.6
+  resolution: "giscus@npm:1.2.6"
+  dependencies:
+    lit: ^2.5.0
+  checksum: dfd4dcaf9626a15c3f21bcdcb4cc63f6f5b610a62debf8ff82cfd71e6e2d9713439483c49d4b7dab8a58b029b00e5c3877c8420a303238dc2d4c45ce402db8de
   languageName: node
   linkType: hard
 
@@ -4221,6 +4266,36 @@ __metadata:
   version: 1.0.3
   resolution: "listify@npm:1.0.3"
   checksum: 371494bda411d3f4c718e9fe92edfa37563bdf8bd697234e3ecfa793a6606f3d7e4c399f77695f9053ee9af3034dde2e8108b1e2939c5589866e5dfe2bff7d48
+  languageName: node
+  linkType: hard
+
+"lit-element@npm:^3.2.0":
+  version: 3.2.2
+  resolution: "lit-element@npm:3.2.2"
+  dependencies:
+    "@lit/reactive-element": ^1.3.0
+    lit-html: ^2.2.0
+  checksum: e1df57c02ad5ae4c42b49a5066b3b623bccf7fa6610bbc3f65bc22cbbe1546ecd6a7f717b1f01863929262f416c4b8b7a39ff166114215f93cc22f4e5b3825c3
+  languageName: node
+  linkType: hard
+
+"lit-html@npm:^2.2.0, lit-html@npm:^2.6.0":
+  version: 2.6.1
+  resolution: "lit-html@npm:2.6.1"
+  dependencies:
+    "@types/trusted-types": ^2.0.2
+  checksum: 32291eb5bcaa7fcc1d433522a9a62c3c3d240e49bb8c57ccea5c10014823d94f62f17e2d5361781cb6ee0b3c9078ef839de6164d5374371d650471904515e48e
+  languageName: node
+  linkType: hard
+
+"lit@npm:^2.5.0":
+  version: 2.6.1
+  resolution: "lit@npm:2.6.1"
+  dependencies:
+    "@lit/reactive-element": ^1.6.0
+    lit-element: ^3.2.0
+    lit-html: ^2.6.0
+  checksum: 74f2813152a48f195784f01b6b4ff7e4e7d8fa90ac272b725d1953fa3e1d6c9dca60b77da435f34144fcdd38705480889a8ea986835676932a8559c897cea517
   languageName: node
   linkType: hard
 

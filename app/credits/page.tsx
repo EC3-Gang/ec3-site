@@ -9,7 +9,7 @@ export default function Credits() {
 					Made by <a href='https://canaris.is-a.dev' target='_blank' rel='noreferrer'>DET171 (Canaris)</a>
 				</p>
 				<p className='mt-3 text-lg font-fira'>
-					Domain sponsored by the school (we finally didnt pay for something ourselves)
+					Domain sponsored by the school and <a href='https://github.com/Darryl-Shi'>Darryl</a>.
 				</p>
 			</main>
 		</div>
