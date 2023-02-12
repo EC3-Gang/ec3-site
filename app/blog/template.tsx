@@ -32,7 +32,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
 		// get page route
 		const path = window.location.pathname;
 		setPageRoute(path);
-	}, []);
+	}, [pageRoute]);
 
 
 	return (
