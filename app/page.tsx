@@ -3,6 +3,7 @@ import styles from './page.module.css';
 import AOS from 'aos';
 import { useEffect } from 'react';
 
+
 export default function Home() {
 	useEffect(() => {
 		AOS.init({

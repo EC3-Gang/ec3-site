@@ -1,11 +1,9 @@
-'use client';
 import './globals.scss';
 import type React from 'react';
 import Link from 'next/link';
-import { useEffect } from 'react';
 import 'aos/dist/aos.css';
-import colorMap from './colorMap';
 import { Fira_Code, Lato } from '@next/font/google';
+
 
 const firaCode = Fira_Code({
 	variable: '--font-fira',
@@ -25,31 +23,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-	useEffect(() => {
-		// get color theme if it exists, if not set it to green
-		let theme = localStorage.getItem('theme');
-		if (!theme) {
-			localStorage.setItem('theme', 'green');
-			theme = 'green';
-		}
-
-		// set the color theme
-		const root = document.documentElement;
-		if ((colorMap as any)[theme]) {
-			const colors = (colorMap as any)[theme];
-			root.style.setProperty('--text-color', colors.accent);
-			root.style.setProperty('--tw-prose-headings', colors.accent);
-			root.style.setProperty('--neon-color', colors.neonColor);
-		}
-		else {
-			localStorage.setItem('theme', 'green');
-			const colors = colorMap.green;
-			root.style.setProperty('--text-color', colors.accent);
-			root.style.setProperty('--tw-prose-headings', colors.accent);
-			root.style.setProperty('--neon-color', colors.neonColor);
-		}
-	}, []);
-
 	return (
 		<html lang='en' className={`${firaCode.variable} ${lato.variable} neon-green bg-black main-accent`}>
 			<head>
