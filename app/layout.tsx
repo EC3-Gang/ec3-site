@@ -3,6 +3,12 @@ import type React from 'react';
 import Link from 'next/link';
 import 'aos/dist/aos.css';
 import { Fira_Code, Lato } from '@next/font/google';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'HCI EC³',
+	description: 'The official site for the Hwa Chong (HS) Electronic Communications and Computing Club (HCI EC³).',
+};
 
 
 const firaCode = Fira_Code({
