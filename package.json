@@ -25,6 +25,8 @@
     "eslint-config-next": "13.1.6",
     "gray-matter": "^4.0.3",
     "katex": "^0.16.4",
+    "mdx-mermaid": "^2.0.0-rc5",
+    "mermaid": "^9.3.0",
     "next": "canary",
     "prism-themes": "^1.9.0",
     "react": "latest",

@@ -3,7 +3,15 @@ import type React from 'react';
 import Link from 'next/link';
 import 'aos/dist/aos.css';
 import { Fira_Code, Lato } from '@next/font/google';
+import localFont from '@next/font/local';
 import type { Metadata } from 'next';
+
+const Cascadia_Code = localFont({
+	adjustFontFallback: false,
+	src: './CascadiaCode.woff2',
+	variable: '--font-cascadia',
+	display: 'swap',
+});
 
 export const metadata: Metadata = {
 	title: {
@@ -33,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 	return (
-		<html lang='en' className={`${firaCode.variable} ${lato.variable} neon-green bg-black main-accent`}>
+		<html lang='en' className={`${firaCode.variable} ${lato.variable} ${Cascadia_Code.variable} neon-green bg-black main-accent`}>
 			<head>
 				<meta name='google-site-verification' content='lmVMRfyduXED9G2uYI0Pb35uvXFj34LzRikL-wTm8WY' />
 			</head>

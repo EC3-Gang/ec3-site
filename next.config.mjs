@@ -5,6 +5,8 @@ import remarkGfm from 'remark-gfm';
 import remarkFrontmatter from 'remark-frontmatter';
 import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
+import mdxMermaid from 'mdx-mermaid';
+
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

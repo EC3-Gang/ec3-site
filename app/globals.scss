@@ -45,6 +45,9 @@ h6 {
 	text-shadow: 0 0 10px var(--neon-color), 0 0 20px var(--neon-color);
 }
 
+pre, code {
+	font-family: var(--font-cascadia) !important;
+}
 
 .prose th {
 	color: var(--text-color) !important;

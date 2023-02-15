@@ -38,6 +38,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
 	return (
 		<div>
 			{children}
+			<hr className='my-10 border-none' />
 			{pageRoute !== '/blog' && <Giscus
 				repo='ec3-gang/ec3-site'
 				repoId='R_kgDOI57tfg'
