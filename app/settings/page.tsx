@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import colorMap from '../colorMap';
 
+
 export default function Settings() {
 	const [color, setColor] = useState('green');
 

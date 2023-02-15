@@ -6,7 +6,10 @@ import { Fira_Code, Lato } from '@next/font/google';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-	title: 'HCI EC³',
+	title: {
+		default: 'HCI EC³',
+		template: '%s | HCI EC³',
+	},
 	description: 'The official site for the Hwa Chong (HS) Electronic Communications and Computing Club (HCI EC³).',
 };
 
@@ -32,7 +35,6 @@ export default function RootLayout({
 	return (
 		<html lang='en' className={`${firaCode.variable} ${lato.variable} neon-green bg-black main-accent`}>
 			<head>
-				<title>HCI EC³</title>
 				<meta name='google-site-verification' content='lmVMRfyduXED9G2uYI0Pb35uvXFj34LzRikL-wTm8WY' />
 			</head>
 			<body>

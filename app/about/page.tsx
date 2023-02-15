@@ -1,15 +1,10 @@
-'use client';
-import { useEffect } from 'react';
-// import AOS from 'aos';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'About Us',
+};
 
 export default function About() {
-	useEffect(() => {
-		// AOS.init({
-		// 	duration: 1000,
-		// 	once: true,
-		// });
-	}, []);
-
 	return (
 		<div className='flex flex-col items-center min-h-screen pt-36 pb-32 px-10 md:px-60'>
 			<main className='flex flex-col items-center w-full flex-1 text-center'>

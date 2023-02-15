@@ -4,6 +4,7 @@ import readingTime from 'reading-time';
 import Link from 'next/link';
 import matter from 'gray-matter';
 
+
 export default async function BlogLanding() {
 	const files = await fs.readdir(path.join(process.cwd(), 'app/blog'), { withFileTypes: true });
 	const slugs = files.filter(post => !post.isFile()).map(post => post.name);

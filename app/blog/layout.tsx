@@ -1,7 +1,14 @@
 import type React from 'react';
-import { useEffect } from 'react';
 import 'prism-themes/themes/prism-one-dark.min.css';
 import 'katex/dist/katex.min.css';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: {
+		default: 'Blog',
+		template: '%s | Blog | HCI EC³',
+	},
+};
 
 
 export default function Layout({ children }: {
