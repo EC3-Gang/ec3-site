@@ -1,6 +1,7 @@
 'use client';
 import type React from 'react';
 import Giscus from '@giscus/react';
+import mermaid from 'mermaid';
 import { useEffect, useState } from 'react';
 
 /*
@@ -31,6 +32,9 @@ export default function Template({ children }: { children: React.ReactNode }) {
 	useEffect(() => {
 		// get page route
 		const path = window.location.pathname;
+		mermaid.initialize({ theme: 'dark', startOnLoad: false });
+
+		mermaid.init(undefined, 'code.language-mermaid-graph');
 		setPageRoute(path);
 	}, [pageRoute]);
 

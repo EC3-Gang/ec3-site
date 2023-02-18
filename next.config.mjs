@@ -5,11 +5,11 @@ import remarkGfm from 'remark-gfm';
 import remarkFrontmatter from 'remark-frontmatter';
 import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
-import mdxMermaid from 'mdx-mermaid';
 
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	reactStrictMode: false,
 	pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'mdx'],
 	experimental: {
 		appDir: true,
@@ -28,7 +28,7 @@ export default addMdx({
 		],
 		rehypePlugins: [
 			rehypeKatex,
-			rehypePrism,
+			[rehypePrism, { ignoreMissing: true }],
 		],
 	},
 })(nextConfig);
