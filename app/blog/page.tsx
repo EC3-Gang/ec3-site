@@ -26,6 +26,7 @@ export default async function BlogLanding() {
 		});
 	}
 
+
 	return (
 		<div className='not-prose'>
 			<main className='w-full text-center'>
@@ -34,7 +35,11 @@ export default async function BlogLanding() {
 				</h1>
 				<div className='flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full'>
 					{posts
-						.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+						.sort((a, b) => {
+							const dateA = new Date(a.date).getTime();
+							const dateB = new Date(b.date).getTime();
+							return dateA < dateB ? 1 : -1;
+						})
 						.map(post => (
 							<Link key={post.slug} href={`/blog/${post.slug}`} className='p-6 mt-6 text-left w-full border-b-2 border-gray-700'>
 								<div className='main-accent'>
