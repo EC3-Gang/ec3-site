@@ -6,7 +6,6 @@ import remarkFrontmatter from 'remark-frontmatter';
 import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
 
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: false,
