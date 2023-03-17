@@ -2,8 +2,8 @@ import './globals.scss';
 import type React from 'react';
 import Link from 'next/link';
 import 'aos/dist/aos.css';
-import { Fira_Code, Lato } from '@next/font/google';
-import localFont from '@next/font/local';
+import { Fira_Code, Lato } from 'next/font/google';
+import localFont from 'next/font/local';
 import type { Metadata } from 'next';
 
 const Cascadia_Code = localFont({
