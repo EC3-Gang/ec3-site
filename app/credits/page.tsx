@@ -12,10 +12,10 @@ export default function Credits() {
 					Credits
 				</h1>
 				<p className='mt-3 text-lg font-fira'>
-					Made by <a href='https://canaris.is-a.dev' target='_blank' rel='noreferrer'>DET171 (Canaris)</a>
+					Made by HCI EC³
 				</p>
-				<p className='mt-3 text-lg font-fira'>
-					Domain sponsored by the school and <a href='https://github.com/Darryl-Shi'>Darryl</a>.
+				<p className='mt-3 font-fira'>
+					Made with Next.js and Tailwind CSS
 				</p>
 			</main>
 		</div>

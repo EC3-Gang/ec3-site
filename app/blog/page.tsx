@@ -33,7 +33,7 @@ export default async function BlogLanding() {
 				<h1 className='text-4xl font-bold font-fira'>
 					Blog
 				</h1>
-				<div className='flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full'>
+				<div className='flex flex-wrap items-center justify-around mt-6'>
 					{posts
 						.sort((a, b) => {
 							const dateA = new Date(a.date).getTime();
@@ -41,7 +41,7 @@ export default async function BlogLanding() {
 							return dateA < dateB ? 1 : -1;
 						})
 						.map(post => (
-							<Link key={post.slug} href={`/blog/${post.slug}`} className='p-6 mt-6 text-left w-full border-b-2 border-gray-700'>
+							<Link key={post.slug} href={`/blog/${post.slug}`} className='p-6 font-fira text-left w-full border-b-2 border-gray-700'>
 								<div className='main-accent'>
 									<h3 className='text-2xl font-bold'>{post.title}</h3>
 									<p className='mt-2 text-sm'>{post.description}</p>
