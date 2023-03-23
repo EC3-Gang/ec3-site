@@ -5,6 +5,8 @@ import 'aos/dist/aos.css';
 import { Fira_Code, Lato } from 'next/font/google';
 import localFont from 'next/font/local';
 import type { Metadata } from 'next';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 const Cascadia_Code = localFont({
 	adjustFontFallback: false,
@@ -35,7 +37,7 @@ const lato = Lato({
 	subsets: ['latin'],
 });
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
 }: {
   children: React.ReactNode
@@ -48,21 +50,21 @@ export default function RootLayout({
 			<body>
 				{/* top navbar */}
 				<div className='p-5 text-right font-fira bg-[rgba(0,0,0,0.8)] fixed top-0 w-full z-50'>
-					<Link href='/' className='mr-12 main-accent'>
+					<Link href='/' className='mr-10 main-accent'>
 						Home
 					</Link>
-					<Link href='/about' className='mr-12 main-accent'>
-						About Us
+					<Link href='/about' className='mr-10 main-accent'>
+						About
 					</Link>
-					<Link href='/blog' className='mr-12 main-accent'>
+					<Link href='/blog' className='mr-10 main-accent'>
 						Blog
 					</Link>
-					<Link href='/credits' className='mr-12 main-accent'>
-						Credits
+					<Link href='/settings' className='mr-8 main-accent'>
+						<i className='fa-solid fa-gear'></i>
 					</Link>
-					<Link href='/settings' className='main-accent'>
-						Settings
-					</Link>
+					{/* <button className='mr-2 main-accent'>
+						<i className='fa-solid fa-user'></i>
+					</button> */}
 				</div>
 
 				{children}

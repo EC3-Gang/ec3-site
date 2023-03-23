@@ -6,10 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-		"export": "next export",
+    "export": "next export",
     "lint": "eslint ."
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.3.0",
     "@giscus/react": "^2.2.6",
     "@leafac/rehype-shiki": "^2.2.1",
     "@mapbox/rehype-prism": "^0.8.0",
@@ -28,6 +29,7 @@
     "mdx-mermaid": "^2.0.0-rc5",
     "mermaid": "^9.3.0",
     "next": "latest",
+    "next-auth": "^4.20.1",
     "prism-themes": "^1.9.0",
     "react": "latest",
     "react-dom": "latest",
