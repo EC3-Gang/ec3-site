@@ -17,8 +17,8 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				fira: ['var(--font-fira)', ...defaultTheme.fontFamily.mono],
-				lato: ['var(--font-lato)', ...defaultTheme.fontFamily.sans],
+				fira: ['\'Fira Code\'', ...defaultTheme.fontFamily.mono],
+				lato: ['\'Lato\'', ...defaultTheme.fontFamily.sans],
 			},
 			typography: ({ theme }) => ({
 				neonGreen: {

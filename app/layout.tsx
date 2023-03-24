@@ -29,19 +29,6 @@ export const metadata: Metadata = {
 };
 
 
-const firaCode = Fira_Code({
-	variable: '--font-fira',
-	display: 'optional',
-	subsets: ['latin'],
-});
-
-const lato = Lato({
-	variable: '--font-lato',
-	display: 'optional',
-	weight: ['400', '700'],
-	subsets: ['latin'],
-});
-
 export default async function RootLayout({
 	children,
 }: {
@@ -51,9 +38,12 @@ export default async function RootLayout({
 
 
 	return (
-		<html lang='en' className={`${firaCode.variable} ${lato.variable} ${Cascadia_Code.variable} neon-green bg-black main-accent`}>
+		<html lang='en' className={`${Cascadia_Code.variable} neon-green bg-black main-accent`}>
 			<head>
 				<meta name='google-site-verification' content='lmVMRfyduXED9G2uYI0Pb35uvXFj34LzRikL-wTm8WY' />
+				<link rel='preconnect' href='https://fonts.googleapis.com' />
+				<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
+				<link href='https://fonts.googleapis.com/css2?family=Fira+Code&family=Lato&display=swap' rel='stylesheet'></link>
 			</head>
 			<body>
 				{/* top navbar */}
