@@ -49,6 +49,7 @@ export default async function RootLayout({
 }) {
 	const session = await getServerSession(authOptions);
 
+
 	return (
 		<html lang='en' className={`${firaCode.variable} ${lato.variable} ${Cascadia_Code.variable} neon-green bg-black main-accent`}>
 			<head>
