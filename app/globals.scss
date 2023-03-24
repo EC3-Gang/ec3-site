@@ -9,6 +9,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.menu-button:hover .menu-list {
+	@apply block;
+}
 
 .main-intro {
 	/* type once Hwa Chong Electronic Communications and Computer Club */
