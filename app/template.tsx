@@ -2,8 +2,6 @@
 import { useEffect } from 'react';
 import type React from 'react';
 import colorMap from './colorMap';
-import Link from 'next/link';
-import supabase from '../utils/supabase-browser';
 
 
 export default function Template({ children }: { children: React.ReactNode }) {

@@ -8,8 +8,9 @@ import { Fira_Code, Lato } from 'next/font/google';
 import localFont from 'next/font/local';
 import type { Metadata } from 'next';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-// import SupabaseListener from '../components/AuthListener';
-// import createClient from '../utils/supabase-server';
+import Profile from './Profile';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '@/pages/api/auth/[...nextauth]';
 
 
 const Cascadia_Code = localFont({
@@ -46,11 +47,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-	// const supabase = createClient();
-
-	// const {
-	// 	data: { session },
-	// } = await supabase.auth.getSession();
+	const session = await getServerSession(authOptions);
 
 	return (
 		<html lang='en' className={`${firaCode.variable} ${lato.variable} ${Cascadia_Code.variable} neon-green bg-black main-accent`}>
@@ -61,17 +58,18 @@ export default async function RootLayout({
 				{/* top navbar */}
 				<div className='p-5 text-right font-fira bg-[rgba(0,0,0,0.8)] fixed top-0 w-full z-50'>
 					<Link href='/' className='mr-10 main-accent'>
-					Home
+						Home
 					</Link>
 					<Link href='/about' className='mr-10 main-accent'>
-					About
+						About
 					</Link>
 					<Link href='/blog' className='mr-10 main-accent'>
-					Blog
+						Blog
 					</Link>
 					<Link href='/settings' className='mr-8 main-accent'>
 						<i className='fa-solid fa-gear'></i>
 					</Link>
+					<Profile session={session!} />
 				</div>
 				{children}
 			</body>
