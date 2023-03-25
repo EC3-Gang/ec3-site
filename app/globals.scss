@@ -5,12 +5,17 @@
 }
 
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .menu-button:hover .menu-list {
 	@apply block;
+}
+
+body {
+
 }
 
 .main-intro {
