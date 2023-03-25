@@ -47,6 +47,7 @@ export default async function RootLayout({
 			</head>
 			<body>
 				{/* top navbar */}
+
 				<div className='p-5 text-right font-fira bg-[rgba(0,0,0,0.8)] fixed top-0 w-full z-50'>
 					<Link href='/' className='mr-10 main-accent'>
 						Home
