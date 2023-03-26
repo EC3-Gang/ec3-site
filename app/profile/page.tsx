@@ -11,7 +11,7 @@ export default async function ProfilePage() {
 	}
 
 	return (
-		<div className='w-2/5 pt-28 m-auto break-words font-fira'>
+		<div className='w-4/5 md:w-2/5 pt-28 m-auto break-words font-fira'>
 			<h2 className='text-4xl text-center'>Profile</h2>
 			<img src={`${(session?.user?.image as string).split('=')[0]}=s576`} className='rounded-full w-48 h-48 mx-auto my-7' referrerPolicy='no-referrer' />
 			{/* display email and name like a form */}

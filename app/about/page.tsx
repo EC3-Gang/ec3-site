@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import excoList from './exco.json';
 
 export const metadata: Metadata = {
 	title: 'About Us',
@@ -69,6 +70,46 @@ export default function About() {
 								2.30pm - 5.30pm
 							</p>
 						</div>
+					</div>
+				</div>
+
+				<div className=''>
+					<h1 className='text-4xl font-bold font-fira mt-16'>
+						Our Exco
+					</h1>
+
+					<div className='mt-10'>
+						{excoList.map((exco) => (
+							<div key={exco.year} className='mt-10'>
+								<h2 className='text-2xl font-bold font-fira'>
+									{exco.year}
+								</h2>
+
+								<div className='columns-3 mt-5 w-full'>
+									<h3 className='text-xl font-bold font-fira'>
+											Chairman
+									</h3>
+									<p className='mt-3 text-lg font-fira'>
+										{exco.chairman}
+									</p>
+
+									<h3 className='text-xl font-bold font-fira mt-5'>
+											Vice Chairman
+									</h3>
+									<p className='mt-3 text-lg font-fira'>
+										{exco.viceChair}
+									</p>
+
+									<h3 className='text-xl font-bold font-fira mt-5'>
+											Training Head
+									</h3>
+									<p className='mt-3 text-lg font-fira'>
+										{exco.trainingHead}
+									</p>
+								</div>
+
+							</div>
+						))}
 					</div>
 				</div>
 
