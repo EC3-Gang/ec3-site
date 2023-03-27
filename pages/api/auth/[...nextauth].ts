@@ -1,5 +1,7 @@
 import NextAuth from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
+import GitHubProvider from 'next-auth/providers/github';
+import type { DefaultSession, DefaultUser, TokenSet, Account, Profile } from 'next-auth';
 
 export const authOptions = {
 	// Configure one or more authentication providers
@@ -8,7 +10,29 @@ export const authOptions = {
 			clientId: process.env.GOOGLE_CLIENT_ID as string,
 			clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
 		}),
+		GitHubProvider({
+			clientId: process.env.GITHUB_ID as string,
+			clientSecret: process.env.GITHUB_SECRET as string,
+		}),
 	],
+	theme: {
+		logo: '/favicon.ico',
+		colorScheme: 'dark' as 'dark' | 'auto' | 'light' | undefined,
+	},
+	callbacks: {
+		async session({ session, user, token }: { session: DefaultSession; user: DefaultUser; token: TokenSet }) {
+			return {
+				...session,
+				provider: token.provider,
+			};
+		},
+		async jwt({ token, account, profile }: { token: TokenSet; account: Account; profile: Profile }) {
+			if (account) {
+				token.provider = account.provider;
+			}
+			return token;
+		},
+	},
 };
 
 export default NextAuth(authOptions);

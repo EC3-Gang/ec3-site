@@ -5,8 +5,6 @@ import type { DefaultSession } from 'next-auth';
 import Link from 'next/link';
 
 export default function Profile({ session }: { session: DefaultSession }) {
-	console.log(session);
-
 	if (session) {
 		{/* display round pfp */}
 		return (
@@ -17,7 +15,7 @@ export default function Profile({ session }: { session: DefaultSession }) {
 	}
 	else {
 		return (
-			<button className='mr-4 main-accent' onClick={() => signIn('google')}>
+			<button className='mr-4 main-accent' onClick={() => signIn()}>
 				<i className='fa-solid fa-user'></i>
 			</button>
 		);

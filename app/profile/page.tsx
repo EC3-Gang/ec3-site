@@ -2,9 +2,12 @@
 import { getServerSession } from 'next-auth';
 import SignOut from './SignOut';
 import { redirect } from 'next/navigation';
+import type { DefaultSession } from 'next-auth';
+import { authOptions } from '@/pages/api/auth/[...nextauth]';
+
 
 export default async function ProfilePage() {
-	const session = await getServerSession();
+	const session = await getServerSession(authOptions);
 	// make the page 404 if the user is not logged in
 	if (!session) {
 		redirect('/');

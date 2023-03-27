@@ -36,6 +36,7 @@ export default async function RootLayout({
 }) {
 	const session = await getServerSession(authOptions);
 
+	if (session) console.log('Provider: ', session.provider);
 
 	return (
 		<html lang='en' className={`${Cascadia_Code.variable} neon-green bg-black main-accent`}>
