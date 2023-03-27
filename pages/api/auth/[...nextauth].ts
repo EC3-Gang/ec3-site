@@ -20,13 +20,13 @@ export const authOptions = {
 		colorScheme: 'dark' as 'dark' | 'auto' | 'light' | undefined,
 	},
 	callbacks: {
-		async session({ session, user, token }: { session: DefaultSession; user: DefaultUser; token: TokenSet }) {
+		async session({ session, user, token }: any) {
 			return {
 				...session,
 				provider: token.provider,
 			};
 		},
-		async jwt({ token, account, profile }: { token: TokenSet; account: Account; profile: Profile }) {
+		async jwt({ token, account, profile }: any) {
 			if (account) {
 				token.provider = account.provider;
 			}
