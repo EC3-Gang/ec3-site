@@ -10,6 +10,14 @@
 @tailwind components;
 @tailwind utilities;
 
+details > summary {
+	list-style-type: '\f0d7\00a0\00a0';
+}
+
+details[open] > summary {
+	list-style-type: '\f0d8\00a0\00a0';
+}
+
 .menu-button:hover .menu-list {
 	@apply block;
 }

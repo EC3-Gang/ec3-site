@@ -73,7 +73,7 @@ export default function About() {
 					</div>
 				</div>
 
-				<div className=''>
+				<div className='w-full'>
 					<h1 className='text-4xl font-bold font-fira mt-16'>
 						Our Exco
 					</h1>
