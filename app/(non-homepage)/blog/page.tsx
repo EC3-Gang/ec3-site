@@ -6,7 +6,7 @@ import matter from 'gray-matter';
 
 
 export default async function BlogLanding() {
-	const files = await fs.readdir(path.join(process.cwd(), 'app/blog'), { withFileTypes: true });
+	const files = await fs.readdir(path.join(process.cwd(), 'app/(non-homepage)/blog'), { withFileTypes: true });
 	const slugs = files.filter(post => !post.isFile()).map(post => post.name);
 	const posts: {
 		slug: string;
@@ -16,7 +16,7 @@ export default async function BlogLanding() {
 		readingTime: string;
 	}[] = [];
 	for (const slug of slugs) {
-		const postPath = path.join(process.cwd(), 'app/blog', slug, 'page.mdx');
+		const postPath = path.join(process.cwd(), 'app/(non-homepage)/blog', slug, 'page.mdx');
 		const content = await fs.readFile(postPath, 'utf-8');
 		const { data }: any = matter(content);
 		posts.push({

@@ -12,10 +12,12 @@
 
 details > summary {
 	list-style-type: '\00a0\00a0';
+	font-family: 'Font Awesome 6 Free';
 }
 
 details[open] > summary {
  	list-style-type: '\00a0\00a0';
+	font-family: 'Font Awesome 6 Free';
 }
 
 .menu-button:hover .menu-list {
