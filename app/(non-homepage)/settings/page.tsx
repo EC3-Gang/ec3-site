@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import colorMap from '../colorMap';
+import colorMap from '../../colorMap';
 
 
 export default function Settings() {

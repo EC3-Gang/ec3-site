@@ -8,14 +8,14 @@ export default function Profile({ session }: { session: DefaultSession }) {
 	if (session) {
 		{/* display round pfp */}
 		return (
-			<Link href='/profile' className='mr-4 main-accent inline'>
+			<Link href='/profile' className='main-accent inline'>
 				<img className='rounded-full w-8 h-8 inline' src={session?.user?.image as string} referrerPolicy='no-referrer' />
 			</Link>
 		);
 	}
 	else {
 		return (
-			<button className='mr-4 main-accent' onClick={() => signIn()}>
+			<button className='main-accent' onClick={() => signIn()}>
 				<i className='fa-solid fa-user'></i>
 			</button>
 		);

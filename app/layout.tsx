@@ -49,19 +49,22 @@ export default async function RootLayout({
 			<body>
 				{/* top navbar */}
 
-				<div className='p-5 text-right font-fira bg-[rgba(0,0,0,0.8)] fixed top-0 w-full z-50'>
-					<Link href='/' className='mr-10 main-accent'>
+				<div className='p-5 text-right font-fira bg-[rgba(0,0,0,0.8)] fixed top-0 w-full z-50 text-sm'>
+					<Link href='/' className='mr-7 main-accent'>
 						Home
 					</Link>
-					<Link href='/about' className='mr-10 main-accent'>
+					<Link href='/about' className='mr-7 main-accent'>
 						About
 					</Link>
-					<Link href='/blog' className='mr-10 main-accent'>
+					<Link href='/blog' className='mr-7 main-accent'>
 						Blog
 					</Link>
-					<Link href='/settings' className='mr-8 main-accent'>
+					<Link href='/settings' className='mr-6 main-accent'>
 						<i className='fa-solid fa-gear'></i>
 					</Link>
+					<a href='https://www.instagram.com/hwachonginfocomm/' target='_blank' className='mr-6 text-base main-accent' rel='noreferrer'>
+						<i className='fa-brands fa-instagram'></i>
+					</a>
 					<Profile session={session!} />
 				</div>
 				{children}

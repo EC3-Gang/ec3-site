@@ -9,29 +9,29 @@ export default function ExcoList() {
 			{excoList.map((exco) => {
 				return (
 					<details key={exco.year} className='mt-7 w-full'>
-						<summary className='text-2xl font-bold font-fira select-none cursor-pointer w-full'>
+						<summary className='text-xl font-bold font-fira select-none cursor-pointer w-full'>
 							{exco.year}
 						</summary>
 
 						<div className='columns-3 mt-5 w-full'>
-							<h3 className='text-xl font-bold font-fira'>
+							<h3 className='text-lg font-bold font-fira'>
 								Chairman
 							</h3>
-							<p className='mt-3 text-lg font-fira'>
+							<p className='mt-3 text-base font-fira'>
 								{exco.chairman}
 							</p>
 
-							<h3 className='text-xl font-bold font-fira mt-5'>
+							<h3 className='text-lg font-bold font-fira mt-5'>
 								Vice Chairman
 							</h3>
-							<p className='mt-3 text-lg font-fira'>
+							<p className='mt-3 text-base font-fira'>
 								{exco.viceChair}
 							</p>
 
-							<h3 className='text-xl font-bold font-fira mt-5'>
+							<h3 className='text-lg font-bold font-fira mt-5'>
 								Training Head
 							</h3>
-							<p className='mt-3 text-lg font-fira'>
+							<p className='mt-3 text-base font-fira'>
 								{exco.trainingHead}
 							</p>
 						</div>
