@@ -16,7 +16,7 @@ export default function Settings() {
 
 
 	return (
-		<div className='pt-36 text-center font-fira'>
+		<div className='pt-36 text-center font-fira mb-16'>
 			<h1 className='text-4xl font-bold'>
 				Settings
 			</h1>
