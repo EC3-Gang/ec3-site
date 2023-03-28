@@ -62,7 +62,7 @@ export default async function RootLayout({
 					<Link href='/settings' className='mr-6 main-accent'>
 						<i className='fa-solid fa-gear'></i>
 					</Link>
-					<a href='https://www.instagram.com/hwachonginfocomm/' target='_blank' className='mr-6 text-base main-accent' rel='noreferrer'>
+					<a href='https://www.instagram.com/hwachonginfocomm/' target='_blank' className='mr-6 main-accent' rel='noreferrer'>
 						<i className='fa-brands fa-instagram'></i>
 					</a>
 					<Profile session={session!} />
