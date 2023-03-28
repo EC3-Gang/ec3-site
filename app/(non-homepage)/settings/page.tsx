@@ -41,7 +41,7 @@ export default function Settings() {
 							localStorage.setItem('theme', color);
 							setColor(color);
 							document.documentElement.style.setProperty('--text-color', (colorMap as any)[color].accent);
-							document.documentElement.style.setProperty('--neon-color', (colorMap as any)[color].accent);
+							document.documentElement.style.setProperty('--neon-color', (colorMap as any)[color].neonColor);
 						}}
 					/>
 				))}

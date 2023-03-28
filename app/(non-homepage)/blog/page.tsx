@@ -41,7 +41,7 @@ export default async function BlogLanding() {
 							return dateA < dateB ? 1 : -1;
 						})
 						.map(post => (
-							<Link key={post.slug} href={`/blog/${post.slug}`} className='p-6 font-fira text-left w-full border-b-2 border-gray-700'>
+							<Link key={post.slug} href={`/blog/${post.slug}`} className='p-6 font-fira text-left w-full border-b-[1px] border-[var(--neon-color)]'>
 								<div className='main-accent'>
 									<h3 className='text-2xl font-bold'>{post.title}</h3>
 									<p className='mt-2 text-sm'>{post.description}</p>

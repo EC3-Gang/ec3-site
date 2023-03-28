@@ -1,3 +1,10 @@
+export type ColorMap = {
+  [key: string]: {
+    accent: string;
+    neonColor: string;
+  };
+};
+
 export default {
 	green: {
 		accent: '#00ff00',
@@ -39,4 +46,4 @@ export default {
 		accent: '#ff7f00',
 		neonColor: '#9f4f00',
 	},
-};
+} satisfies ColorMap;
