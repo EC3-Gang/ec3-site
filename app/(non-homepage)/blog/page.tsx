@@ -3,9 +3,12 @@ import path from 'path';
 import readingTime from 'reading-time';
 import Link from 'next/link';
 import matter from 'gray-matter';
+import dayjs from 'dayjs';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
 
 
 export default async function BlogLanding() {
+	dayjs.extend(customParseFormat);
 	const files = await fs.readdir(path.join(process.cwd(), 'app/(non-homepage)/blog'), { withFileTypes: true });
 	const slugs = files.filter(post => !post.isFile()).map(post => post.name);
 	const posts: {
@@ -27,6 +30,12 @@ export default async function BlogLanding() {
 	}
 
 
+	const formatDate = (dateStr: string) => {
+		const date = dayjs(dateStr, ['DD/M/YYYY', 'DD/MM/YYYY', 'D/M/YYYY', 'D/MM/YYYY']);
+		return date.format('MMMM D, YYYY');
+	};
+
+
 	return (
 		<div className='not-prose'>
 			<main className='w-full text-center'>
@@ -45,6 +54,7 @@ export default async function BlogLanding() {
 								<div className='main-accent'>
 									<h3 className='text-2xl font-bold'>{post.title}</h3>
 									<p className='mt-2 text-sm'>{post.description}</p>
+									<p className='mt-1 text-sm'>{formatDate(post.date)}</p>
 									<p className='text-sm'>{post.readingTime}</p>
 								</div>
 							</Link>
