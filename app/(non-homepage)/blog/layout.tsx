@@ -16,7 +16,7 @@ export default function Layout({ children }: {
 }) {
 	// get page route
 	return (
-		<div className='prose prose-neonGreen pt-36 pb-10 w-5/6 md:w-full m-auto main-accent font-fira'>
+		<div className='prose prose-neonGreen pt-36 w-5/6 md:w-full m-auto main-accent font-fira'>
 			{children}
 		</div>
 	);
