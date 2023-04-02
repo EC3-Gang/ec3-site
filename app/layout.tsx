@@ -49,9 +49,9 @@ export default async function RootLayout({
 			<body>
 				{/* top navbar */}
 
-				<div className='p-5 text-right font-fira bg-[rgba(0,0,0,0.8)] fixed top-0 w-full z-50 text-sm'>
-					<Link href='/' className='mr-7 main-accent'>
-						Home
+				<div className='px-5 pt-4 text-right font-fira bg-[rgba(0,0,0,0.8)] fixed top-0 w-full z-50 text-sm'>
+					<Link href='/' className='mr-7 main-accent absolute left-4 top-3'>
+						<img src='/favicon.ico' alt='HCI EC³ Logo' className='w-10 h-10' />
 					</Link>
 					<Link href='/about' className='mr-7 main-accent'>
 						About
