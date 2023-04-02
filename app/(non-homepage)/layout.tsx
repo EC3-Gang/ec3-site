@@ -5,7 +5,11 @@ export default function NonHomepageLayout({ children }: { children: React.ReactN
 	return (
 		<div className='pb-10'>
 			{children}
-			<p className='mt-10 text-center'>&copy; 2022-{year} HCI EC<sup>3</sup>. All rights reserved. </p>
+			<p className='mt-16 text-center leading-loose text-sm'>
+				&copy; 2022-{year} HCI EC<sup>3</sup>. All rights reserved. <br />
+				Made with ❤️, Next.js, and Tailwind CSS.
+			</p>
+
 		</div>
 	);
 }

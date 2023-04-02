@@ -1,8 +1,11 @@
+// This file sets the theme of the page based on the colorMap object which maps the themes to a set of colors.
+// The theme is stored in localStorage, but if it is not set it defaults to green.
+// The colors are then set as CSS variables in the root element of the document.
+
 'use client';
 import { useEffect } from 'react';
 import type React from 'react';
 import colorMap from './colorMap';
-
 
 export default function Template({ children }: { children: React.ReactNode }) {
 	useEffect(() => {
