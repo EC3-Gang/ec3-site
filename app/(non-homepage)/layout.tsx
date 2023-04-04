@@ -1,5 +1,11 @@
 import type React from 'react';
 
+/**
+ * This is the NonHomepageLayout component. This component is used for all pages
+ * except the homepage. This component renders its children, as well as a footer.
+ * @param {React.ReactNode[] | React.ReactNode} children
+ * @returns {React.ReactNode}
+ */
 export default function NonHomepageLayout({ children }: { children: React.ReactNode[] | React.ReactNode }) {
 	const year = new Date().getFullYear();
 	return (
