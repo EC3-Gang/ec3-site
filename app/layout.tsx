@@ -2,6 +2,8 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import './globals.scss';
 import type React from 'react';
+import
+{ Analytics } from '@vercel/analytics/react';
 import Link from 'next/link';
 import 'aos/dist/aos.css';
 import { Fira_Code, Lato } from 'next/font/google';
@@ -68,6 +70,7 @@ export default async function RootLayout({
 					<Profile session={session!} />
 				</div>
 				{children}
+				<Analytics />
 			</body>
 		</html>
 	);
