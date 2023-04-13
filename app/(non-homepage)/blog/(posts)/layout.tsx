@@ -2,7 +2,7 @@
 import type React from 'react';
 import Giscus from '@giscus/react';
 import mermaid from 'mermaid';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 
 export default function PostLayout({ children }: { children: React.ReactNode }) {

@@ -32,6 +32,7 @@
     "eslint-config-berry": "^0.15.5",
     "eslint-config-next": "latest",
     "firebase": "^9.18.0",
+    "fuse.js": "^6.6.2",
     "gray-matter": "^4.0.3",
     "katex": "^0.16.4",
     "mdx-mermaid": "^2.0.0-rc5",
