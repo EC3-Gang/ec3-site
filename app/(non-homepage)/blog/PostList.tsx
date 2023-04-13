@@ -50,9 +50,9 @@ export default function PostList({ posts }: {
 				</div>
 
 				<div className='flex flex-wrap items-center justify-around mt-6'>
-					{(fuse.search(searchTerm)
-						.map(result => result.item).length ? (fuse.search(searchTerm)
-							.map(result => result.item)) : posts)
+					{(searchTerm.length
+						? (fuse.search(searchTerm).map(result => result.item))
+						: posts)
 						.sort((a, b) => {
 							// sort using dayjs
 							const dateA = dayjs(a.date, ['DD/M/YYYY', 'DD/MM/YYYY', 'D/M/YYYY', 'D/MM/YYYY']);
