@@ -37,7 +37,9 @@ export default async function NonHomepageLayout({ children }: { children: React.
 			</div>
 		);
 	}
-	catch {
+	catch (e) {
+		console.error(e);
+
 		const year = new Date().getFullYear();
 		return (
 			<div className='pb-10'>
