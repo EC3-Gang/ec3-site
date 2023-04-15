@@ -34,9 +34,7 @@ export default async function NonHomepageLayout({ children }: { children: React.
 	}
 	catch (e) {
 		// if git is not installed, get hash, short hash and date of latest commit from file
-		const [shortHash, hash, date] = (await fs.readFile(
-			path.join(process.cwd(), 'app/(non-homepage)/commit-info.txt')
-			, 'utf-8')).split('\n');
+		const { shortHash, hash, date } = await import('./commitInfo.json');
 
 		const year = new Date().getFullYear();
 		return (
