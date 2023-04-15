@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "yarn commit-info && next build",
     "start": "next start",
     "export": "next export",
-    "lint": "eslint ."
+    "lint": "eslint .",
+		"commit-info": "sh ./scripts/commit-info.sh"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.3.0",
@@ -34,7 +35,6 @@
     "firebase": "^9.18.0",
     "fuse.js": "^6.6.2",
     "gray-matter": "^4.0.3",
-    "isomorphic-git": "^1.23.0",
     "katex": "^0.16.4",
     "mdx-mermaid": "^2.0.0-rc5",
     "mermaid": "^9.3.0",
