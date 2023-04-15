@@ -11,7 +11,7 @@ export default async function NonHomepageLayout({ children }: { children: React.
 	const [shortHash, hash, date] = (await Promise.all([
 		exec('git rev-parse --short HEAD'),
 		exec('git rev-parse HEAD'),
-		exec('git log -1 --format=%cd --date=short'),
+		exec('git log -1 --format=%cd'),
 	])).map(str => str.stdout.trim());
 
 
