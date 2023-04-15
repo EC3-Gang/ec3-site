@@ -5,16 +5,20 @@ import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import git from 'isomorphic-git';
 import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 dayjs.extend(relativeTime);
 const exec = util.promisify(cp.exec);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default async function NonHomepageLayout({ children }: { children: React.ReactNode[] | React.ReactNode }) {
-	const dir = process.cwd();
-
 	try {
+		// get current path of this file
+
+
 		const commitInfo = (await git.log({
 			fs,
-			dir,
+			dir: path.join(__dirname, '../../'),
 			depth: 1,
 		}))[0];
 
