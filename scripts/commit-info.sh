@@ -10,3 +10,4 @@ json="{\"shortHash\":\"$commit_short\",\"hash\":\"$commit_long\",\"date\":\"$com
 
 # Write the JSON string to a file named git_log.json
 echo $json > "app/(non-homepage)/commitInfo.json"
+
