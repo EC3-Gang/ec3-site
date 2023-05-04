@@ -14,6 +14,7 @@ const nextConfig = {
 		appDir: true,
 		mdxRs: false,
 	},
+	swcMinify: true,
 };
 
 

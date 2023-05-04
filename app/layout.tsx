@@ -2,8 +2,8 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import './globals.scss';
 import type React from 'react';
-import
-{ Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/react';
+import DropdownMenu from './DropdownMenu';
 import Link from 'next/link';
 import 'aos/dist/aos.css';
 import { Fira_Code, Lato } from 'next/font/google';
@@ -50,7 +50,7 @@ export default async function RootLayout({
 			<body>
 				{/* top navbar */}
 
-				<div className='px-5 pt-4 text-right font-fira bg-[rgba(0,0,0,0.8)] fixed top-0 w-full z-50 text-sm'>
+				<div className='px-5 pt-4 text-right font-fira bg-[rgba(0,0,0,0.8)] fixed top-0 w-full z-50 text-sm select-none'>
 					<Link href='/' className='mr-7 main-accent absolute left-4 top-3'>
 						<img src='/favicon.ico' alt='HCI EC³ Logo' className='w-10 h-10' />
 					</Link>
@@ -60,12 +60,7 @@ export default async function RootLayout({
 					<Link href='/blog' className='mr-7 main-accent'>
 						Blog
 					</Link>
-					<Link href='/settings' className='mr-6 main-accent'>
-						<i className='fa-solid fa-gear'></i>
-					</Link>
-					<a href='https://www.instagram.com/hwachonginfocomm/' target='_blank' className='mr-6 main-accent' rel='noreferrer'>
-						<i className='fa-brands fa-instagram'></i>
-					</a>
+					<div className='mr-7 main-accent inline-block'><DropdownMenu /></div>
 					<Profile session={session!} />
 				</div>
 				{children}
