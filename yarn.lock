@@ -895,6 +895,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@heroicons/react@npm:^2.0.17":
+  version: 2.0.17
+  resolution: "@heroicons/react@npm:2.0.17"
+  peerDependencies:
+    react: ">= 16"
+  checksum: 31677c9b95de4ea92efa205c7a803c33003d3203b0cebf9ca74522485e5351caff7070cbd898885bf050f181682cab8d4815cbef0e7624c56d3312cdf50d2cb9
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.8":
   version: 0.11.8
   resolution: "@humanwhocodes/config-array@npm:0.11.8"
@@ -3709,6 +3718,7 @@ __metadata:
     "@fortawesome/fontawesome-free": ^6.3.0
     "@giscus/react": ^2.2.6
     "@headlessui/react": ^1.7.14
+    "@heroicons/react": ^2.0.17
     "@leafac/rehype-shiki": ^2.2.1
     "@mapbox/rehype-prism": ^0.8.0
     "@mdx-js/loader": ^2.2.1
