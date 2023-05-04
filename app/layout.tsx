@@ -9,7 +9,6 @@ import 'aos/dist/aos.css';
 import { Fira_Code, Lato } from 'next/font/google';
 import localFont from 'next/font/local';
 import type { Metadata } from 'next';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import Profile from './Profile';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/pages/api/auth/[...nextauth]';
@@ -42,6 +41,7 @@ export default async function RootLayout({
 	return (
 		<html lang='en' className={`${Cascadia_Code.variable} neon-green bg-black main-accent`}>
 			<head>
+				<script src='https://kit.fontawesome.com/08ddfab45a.js' crossOrigin='anonymous'></script>
 				<meta name='google-site-verification' content='lmVMRfyduXED9G2uYI0Pb35uvXFj34LzRikL-wTm8WY' />
 				<link rel='preconnect' href='https://fonts.googleapis.com' />
 				<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
