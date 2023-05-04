@@ -17,7 +17,7 @@ export default function ExcoList() {
 										<ChevronUpIcon
 											className={`${
 												open ? 'rotate-180 transform' : ''
-											} h-5 w-5 main-accent duration-100`}
+											} h-5 w-5 main-accent duration-100 inline-block mr-4`}
 										/>{exco.year}
 									</Disclosure.Button>
 									<Transition
