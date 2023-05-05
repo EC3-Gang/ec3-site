@@ -16,7 +16,7 @@ export default function ExcoList() {
 									<Disclosure.Button className='text-xl font-bold font-fira select-none cursor-pointer w-full focus:outline-none'>
 										<ChevronUpIcon
 											className={`${
-												open ? 'rotate-180 transform' : ''
+												!open ? 'rotate-180 transform' : ''
 											} h-5 w-5 main-accent duration-100 inline-block mr-4`}
 										/>{exco.year}
 									</Disclosure.Button>

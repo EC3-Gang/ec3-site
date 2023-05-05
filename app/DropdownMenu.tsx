@@ -11,7 +11,7 @@ export default function DropdownMenu() {
 		<Menu>
 			{({ open }) => (
 				<>
-					<Menu.Button><span className='hover:opacity-80'>More <ChevronUpIcon
+					<Menu.Button className={'focus:outline-none'}><span className='hover:opacity-80'>More <ChevronUpIcon
 						className={`${
 							!open ? 'rotate-180 transform' : ''
 						} h-5 w-5 -mt-[0.2rem] font-bold main-accent duration-100 inline-block`}
