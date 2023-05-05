@@ -13,7 +13,7 @@ export default function ExcoList() {
 						<Disclosure>
 							{({ open }) => (
 								<>
-									<Disclosure.Button className='text-xl font-bold font-fira select-none cursor-pointer w-full'>
+									<Disclosure.Button className='text-xl font-bold font-fira select-none cursor-pointer w-full focus:outline-none'>
 										<ChevronUpIcon
 											className={`${
 												open ? 'rotate-180 transform' : ''
