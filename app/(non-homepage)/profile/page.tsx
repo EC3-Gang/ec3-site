@@ -3,7 +3,7 @@ import { getServerSession } from 'next-auth';
 import SignOut from './SignOut';
 import { redirect } from 'next/navigation';
 import type { DefaultSession } from 'next-auth';
-import { authOptions } from '@/pages/api/auth/[...nextauth]';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 
 
 export default async function ProfilePage() {

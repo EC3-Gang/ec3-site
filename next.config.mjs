@@ -11,8 +11,8 @@ const nextConfig = {
 	reactStrictMode: false,
 	pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'mdx'],
 	experimental: {
-		appDir: true,
 		mdxRs: false,
+		typedRoutes: true,
 	},
 	swcMinify: true,
 };

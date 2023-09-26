@@ -11,7 +11,7 @@ import localFont from 'next/font/local';
 import type { Metadata } from 'next';
 import Profile from './Profile';
 import { getServerSession } from 'next-auth';
-import { authOptions } from '@/pages/api/auth/[...nextauth]';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 
 
 const Cascadia_Code = localFont({
