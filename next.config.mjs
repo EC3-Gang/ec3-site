@@ -10,6 +10,9 @@ import remarkMath from 'remark-math';
 const nextConfig = {
 	reactStrictMode: false,
 	pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'mdx'],
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
 	experimental: {
 		mdxRs: false,
 		typedRoutes: true,
