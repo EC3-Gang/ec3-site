@@ -23,6 +23,7 @@
     "rules": {
 			"react/react-in-jsx-scope": "off",
 			"jsx-quotes": ["error", "prefer-single"],
-			"next/no-html-link-for-pages": "off"
+			"next/no-html-link-for-pages": "off",
+			"@typescript-eslint/no-explicit-any": "off"
     }
 }
