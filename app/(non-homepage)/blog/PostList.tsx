@@ -5,6 +5,7 @@ import type { Post } from './page';
 import Link from 'next/link';
 import { useState, useRef } from 'react';
 import Fuse from 'fuse.js';
+import { Route } from 'next';
 
 export default function PostList({ posts }: {
 	posts: Post[]
@@ -60,7 +61,7 @@ export default function PostList({ posts }: {
 							return dateB.diff(dateA);
 						})
 						.map(post => (
-							<Link key={post.slug} href={`/blog/${post.slug}`} className='p-6 font-fira text-left w-full border-b-[1px] border-[var(--neon-color)]'>
+							<Link key={post.slug} href={(`/blog/${post.slug}`) as Route} className='p-6 font-fira text-left w-full border-b-[1px] border-[var(--neon-color)]'>
 								<div className='main-accent'>
 									<h3 className='text-2xl font-bold'>{post.title}</h3>
 									<p className='mt-2 text-sm'>{post.description}</p>
